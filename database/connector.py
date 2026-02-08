@@ -9,7 +9,7 @@ load_dotenv()
 DB_CONFIG = {
     "dbname": os.getenv("DB_NAME", "postgres"),
     "user": os.getenv("DB_USER", "postgres"),
-    "password": os.getenv("DB_PASSWORD"),  # Больше никаких секретов в коде!
+    "password": os.getenv("DB_PASSWORD"),
     "host": os.getenv("DB_HOST", "127.0.0.1"),
     "port": os.getenv("DB_PORT", "5432"),
 }
