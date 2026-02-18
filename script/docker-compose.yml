@@ -1,0 +1,13 @@
+services:
+  vectordb:
+    image: ankane/pgvector:latest
+    container_name: rag_vector_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secretpassword
+      POSTGRES_DB: rag_db
+    ports:
+      - "5431:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
